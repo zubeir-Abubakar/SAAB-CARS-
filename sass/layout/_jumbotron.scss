@@ -1,0 +1,143 @@
+
+.jumbotron {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary,
+        $color-primary-light),
+         url("../img/background.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        width: 80%;
+        margin: 0 auto;
+        min-height: 28%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header-secondary {
+        font-size: 7rem;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        font-weight: 300;
+        color: #fff;
+        text-shadow: 1rem 1rem 1.1rem rgba($color-black,.8);
+        animation: jumbotronAnimate .6s ease-in;
+    }
+
+    &__paragraph {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 0.6rem;
+        color: #fff;
+        text-shadow: 1rem 1rem 1.1rem rgba($color-black,.8);
+        animation: jumbotronAnimate .5s ease-in-out;
+        
+    }
+
+    &__btn {
+        color: #fff;
+        display: inline-block;
+        border: none;
+        padding: 2rem 2rem;
+        border: none;
+        font-size: 1.8rem;
+        border-radius: .5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        transition: all .1s ease-in-out;
+        animation: jumbotronBtnAnimate .8s  ease backwards;
+        animation-delay: 0.8s;
+        
+        
+    }
+
+    &__btn:hover {
+        transform: translateY(-.5rem) scaleX(1.05);
+        box-shadow: 0 0.7rem 1.1rem rgba($color-white,.3);
+    }
+
+    &__btn:active {
+        transform: translateY(-.2rem);
+        box-shadow: 0 0.5rem 0.9rem rgba($color-white,.22);
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .jumbotron {
+        height: 100rem;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+   
+    .jumbotron__content {
+        min-height: 25%;
+    }
+    .jumbotron__header-secondary {
+        font-size: 5rem;
+    }
+
+    .jumbotron__paragraph {
+        font-size: 3rem;
+        
+    }
+
+    .jumbotron__btn {
+        padding: 1.8rem 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+
+    .jumbotron__content {
+        width: 95%;
+    }
+
+    .jumbotron__header-secondary {
+        letter-spacing: 0.5rem;
+        font-size: 4.5rem;
+        
+    }
+
+    .jumbotron__paragraph {
+        letter-spacing: 0.3rem;
+        font-size: 2.5rem; 
+        
+    }
+
+    .jumbotron__btn {
+        padding: 1.8rem 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+
+    .jumbotron__header-secondary {
+        letter-spacing: 0.5rem;
+        font-size: 4.2rem;
+        text-align: center;
+    }
+
+    .jumbotron__content {
+        min-height: 30%;
+    }
+
+    .jumbotron__paragraph {
+        letter-spacing: 0.3rem;
+        font-size: 2.2rem;
+        text-align: center;
+        
+    }
+}

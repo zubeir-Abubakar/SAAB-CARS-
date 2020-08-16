@@ -1,0 +1,170 @@
+.contact {
+    min-height: 90vh;
+    background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    &__header {
+        margin-bottom: 2rem;
+        color: #fff;
+    }
+    &__form {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__form-group {
+        width: 50%;
+        min-height: 12%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    &__label {
+        font-family: inherit;
+        font-size: 2rem;
+        color: #fff;
+    }
+    &__label-about {
+        font-family: inherit;
+        font-size: 2rem;
+        color: #fff;
+    }
+    &__input {
+        font-family: inherit;
+        font-size: 1.8rem;
+        height: 5rem;
+        width: 60%;
+        outline: none;
+        text-indent: .5rem;
+        border: none;
+        border-radius: .3rem;
+        background-color: rgba(255, 255, 255, .80);
+        box-shadow: 0 1rem 2rem rgba($color-black, .30);
+        display: block;
+        &::placeholder {
+            font-size: 1.8rem;
+            color: #333;
+        }
+        &:focus {
+            border-bottom: 1.5px solid $color-green-dark;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
+            outline: none;
+        }
+        &:invalid {
+            border-bottom: 1.5px solid orangered;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
+        }
+    }
+    &__input-about {
+        font-family: inherit;
+        font-size: 1.8rem;
+        height: 15rem;
+        width: 80%;
+        display: block;
+        padding: .2rem 0 12rem 0;
+        outline: none;
+        text-indent: .5rem;
+        border: none;
+        border-radius: .3rem;
+        background-color: rgba(255, 255, 255, .80);
+        box-shadow: 0 1rem 2rem rgba($color-black, .30);
+        &::placeholder {
+            font-size: 1.8rem;
+            color: #333;
+        }
+        &:focus {
+            border-bottom: 1.5px solid $color-green-dark;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
+            outline: none;
+        }
+        &:invalid {
+            border-bottom: 1.5px solid orangered;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
+        }
+    }
+    &__btn {
+        margin-top: 5rem;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        border-radius: .3rem;
+        color: #333;
+        font-size: 1.8rem;
+        font-family: inherit;
+        background-color: rgba($color-white-gray, .70);
+        transition: all .1s linear;
+        cursor: pointer;
+        margin-bottom: 10rem;
+        &:hover {
+            background-color: rgba($color-white-gray, 1);
+            box-shadow: 0 0.3rem 1rem rgba($color-black, .25);
+        }
+    }
+    &__footer {
+        text-align: center;
+        color: #fff;
+        display: flex;
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1430px) {
+    .contact {
+        &__form {}
+        &__form-group {
+            width: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 935px) {
+    .contact {
+        &__header {
+            font-size: 2.2rem;
+            top: 1.5rem;
+        }
+        &__form {}
+        &__form-group {
+            width: 85%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact {
+        min-height: 100vh;
+        &__form {
+            width: 95%;
+        }
+        &__input {
+            width: 80%;
+            height: 6rem;
+            font-size: 1.6rem;
+        }
+        &__label {
+            font-size: 1.6rem;
+        }
+        &__input-about {
+            width: 90%;
+            height: 4rem;
+            font-size: 1.6rem;
+            padding: 1.5rem 0 10rem;
+        }
+        &__form-group {
+            width: 100%;
+        }
+        &__footer {
+            text-align: center;
+        }
+        &__btn {
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+        }
+    }
+}

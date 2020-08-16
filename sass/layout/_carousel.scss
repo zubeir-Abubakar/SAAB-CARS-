@@ -1,0 +1,253 @@
+.carousel-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem;
+    position: relative;
+}
+
+.carousel-header {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.carousel {
+    max-width: 75%;
+    min-height: 85vh;
+    margin: 0rem auto;
+    border: 1rem solid $color-test-light;
+    border-radius: .4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba($color-black, .6);
+    &__inner {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        display: flex;
+        transition: all .3s linear;
+    }
+    &__img {
+       width: 100%;
+       height: 100%;
+    }
+}
+
+.fa-angle-right {
+    cursor: pointer;
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    right: 2.5rem;
+    color: $color-test-light;
+    opacity: .6;
+    transform: translateY(-50%);
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.fa-angle-left {
+    cursor: pointer;
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    color: $color-test-light;
+    opacity: .6;
+    transform: translateY(-50%);
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.bullets-container {
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    left: 50%;
+    bottom: 2.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+
+.bullets {
+    display: inline-block;
+    width: 4rem;
+    border-radius: .5rem;
+    background-color: $color-test-light;
+    height: 1rem;
+    opacity: 0.45;
+    cursor: pointer;
+    transition: all .2s ease;
+    box-shadow: 0 1rem 1.5rem rgba($color-black,.30);
+    margin: 0 1rem;
+    
+}
+
+.bullets:hover {
+    opacity: 0.65;
+    box-shadow: 0 1rem 1.5rem rgba($color-black,.35);
+}
+
+.bullets.active {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 1rem 1.5rem rgba($color-black,.40);
+}
+
+
+@media only screen and (max-width: 1530px) { 
+    .carousel-header {
+        font-size: 3rem;
+        
+    }
+
+}
+
+
+@media only screen and (max-width: 1325px) { 
+    .carousel {
+        max-width: 85%;
+       min-height: 85vh;
+    }
+}
+
+@media only screen and (max-width: 1180px) { 
+    .carousel {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) { 
+
+    .carousel {
+        min-height: 53vh;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) { 
+
+    .carousel {
+        min-height: 70vh;
+    }
+
+}
+
+@media only screen and (max-width: 850px) { 
+    .carousel-header {
+        font-size: 2.5rem;
+    }
+    .carousel {
+        min-height: 65vh;
+    }
+
+    .fa-angle-left {
+        font-size: 8rem;
+    }
+
+    .fa-angle-right {
+        font-size: 8rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) { 
+    .carousel-container {
+        min-height: 65vh;
+    }
+    .carousel-header {
+        font-size: 2rem;
+    }
+    .carousel {
+        min-height: 53vh;
+    }
+
+    .fa-angle-left {
+        font-size: 7rem;
+        left: 1rem;;
+    }
+
+    .fa-angle-right {
+        font-size: 7rem;
+        right: 1rem;
+    }
+
+    .bullets {
+        width: 3rem;
+    }
+}
+
+@media only screen and (max-width: 660px) { 
+    .carousel {
+        min-height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 545px) { 
+    .carousel {
+        min-height: 42vh;
+    }
+}
+
+
+@media only screen and (max-width: 414px) { 
+    .carousel {
+        min-height: 37vh;
+    }
+}
+
+@media only screen and (max-width: 412px) { 
+    .carousel {
+        min-height: 33.5vh;
+    }
+}
+
+@media only screen and (max-width: 375px) { 
+    .carousel {
+        min-height: 30.5vh;
+    }
+}
+
+@media only screen and (max-width: 361px) { 
+
+    .carousel-header {
+        font-size: 1.6rem;
+    }
+
+    .carousel {
+        min-height: 36vh;
+    }
+
+    .fa-angle-left {
+        font-size: 4rem;
+        left: 1rem;;
+    }
+
+    .fa-angle-right {
+        font-size: 4rem;
+        right: 1rem;
+    }
+
+    .bullets-container {
+        top: -2.5rem;
+    }
+
+    .bullets {
+        width: 2rem;
+        margin: 0 .5rem;
+    }
+}
+
+
+
+
+
